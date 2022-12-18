@@ -141,8 +141,7 @@ In this model, you can have (embed) all the related data in a single document, i
 ```
 ## Normalized Data Model:
 In this model, you can refer the sub documents in the original document. 
-<img src="images/normalized-data-model.png" alt="Normalized Data Model">
-
+![Normalized Data Model](https://www.mongodb.com/docs/manual/images/data-model-normalized.bakedsvg.svg)
 ## Data Types
 |    <br>Data   Types      	|    <br>Description                                                                                                                                                                                                 	|
 |--------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
