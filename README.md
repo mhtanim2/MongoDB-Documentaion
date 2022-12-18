@@ -191,6 +191,10 @@ Suppose we wantto create a database that doesn't exists at all. Then you have to
 	use schools
 	db.students.insert({name:"Ruman",city:"Rangpur"})
 ```
+- ## Show Collections in Database
+```javascript
+	show collections
+```
 In Order to delete a database switch to that database then you can dropDatabase()
 - ## Drop Database 
 ```shell
