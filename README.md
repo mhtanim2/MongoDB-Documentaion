@@ -111,7 +111,7 @@ Example: ObjectId("6009c0eee65f6dce28fb3e50")
 - Connect MongoDB With Compass Application
 
 ## MongoDB - Data Modeling:
-MongoDB provides two types of data models
+MongoDB provides `two` types of data models
 - Embedded Data Model
 - Normalized Data Model
 
