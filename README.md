@@ -228,11 +228,11 @@ If requires to delete an existing collection use drop() method
 	db.studetns.find()
 ```
 projection means selecting only the necessary data rather than selecting whole of the data of a document.
-- ## MongoDB Projection `skip -> 0, select-> 1`
+- ## MongoDB Projection 
 ```javascript
 	db.students.find({},{_id:0,name:1})
 ```
->## Projection
+> ## Projection
 
 - It shows the projected column.
 - Projection uses boolean number.
