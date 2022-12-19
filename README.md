@@ -139,7 +139,7 @@ In this model, you can have (embed) all the related data in a single document, i
 	}
 }
 ```
-## Normalized Data Model:
+## Normalized Data Model
 In this model, you can refer the sub documents in the original document. 
 ![Normalized Data Model](https://www.mongodb.com/docs/manual/images/data-model-normalized.bakedsvg.svg)
 ## Data Types
@@ -189,10 +189,10 @@ Suppose we wantto create a database that doesn't exists at all. Then you have to
 - ## Create Database
 ```javascript
 	use schools
-	db.students.insert({name:"Ruman",city:"Rangpur"})
+	db.students.insert({name:"Tanim",city:"Dhaka"})
 ```
 - ## Show Collections in Database
-```javascript
+```shell
 	show collections
 ```
 In Order to delete a database switch to that database then you can dropDatabase()
@@ -213,25 +213,30 @@ If requires to delete an existing collection use drop() method
 ```
 - ## Single Document Insert to a Collection
 ```javascript
-	db.students.insertOne({name:"Ruman",city:"Rangpur"})
+	db.students.insertOne({name:"Tahmid",city:"Dhaka"})
 ```
 - ## Multiple Documents Insert to a Collection
 ```javascript
-	db.students.insertMany([{name:"Ruman",city:"Rangpur"},{name:"Afrin",city:"Dhaka"},{name:"Anwar",city:"Rangpur"}])
+	db.students.insertMany([{name:"Mehrab",city:"Donia"},{name:"Namita",city:"Comillah"},{name:"Hafiz",city:"Rajbari"}])
 ```
 - ## Find Single Document
 ```javascript
-	db.students.findOne({name:"Ruman"})
+	db.students.findOne({name:"Namita"})
 ```
 - ## Find All Documents
 ```javascript
 	db.studetns.find()
 ```
 projection means selecting only the necessary data rather than selecting whole of the data of a document.
-- ## MongoDB Projection (skip -> 0, select-> 1)
+- ## MongoDB Projection `skip -> 0, select-> 1`
 ```javascript
 	db.students.find({},{_id:0,name:1})
 ```
+>## Projection
+
+- It shows the projected column.
+- Projection uses boolean number.
+- `0 for skip column` & `1 for select column`
 - ## Query Operators
 1. <font style="color:green">$eq</font> : Equal To Operator
 2. <font style="color:green">$lt</font> : Less Than Operator
