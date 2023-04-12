@@ -1,25 +1,66 @@
-## What is MongoDB: 
+# Welcom to `MongoDB World`
+
+- [What is MongoDB](#what-is-mongodb)
+- [What MongoDB can Manage](#what-mongodb-can-manage)
+- [NoSQL Databases](#nosql-databases)
+- [NoSQL Behind History](#nosql-behind-history)
+- [Basic Terminology](#basic-terminology)
+- [Sample JSON Object](#sample-json-object)
+- [MongoDB Default ID](#mongodb-default-id)
+- [Advantages](#advantages)
+- [Where to use MongoDB?](#where-to-use-mongodb)
+- [MongoDB Edition](#mongodb-edition)
+- [Install MongoDB](#install-mongodb)
+- [MongoDB Data Modeling](#mongodb-data-modeling)
+- [Embeded Data Model](#embeded-data-model)
+- [Normalized Data Model](#normalized-data-model)
+- [Data Type](#data-type)
+- [MongoDB Shell](#mongodb-shell)
+- [MongoDB Help](#mongodb-help)
+- [MongoDB Statistics](#mongodb-statistics)
+- [Show Database Names](#show-database-names)
+- [Create Database](#create-database)
+- [Show Collections in Database](#show-collections-in-database)
+- [Drop Database](#drop-database)
+- [Single Document Insert](#single-document-insert-to-a-collection)
+- [Multiple Documents Insert](#multiple-documents-insert-to-a-collection)
+- [Find Single Document](#find-single-document)
+- [Find All Documents](#find-all-documents)
+- [MongoDB Projection](#mongodb-projection)
+- [Projection](#projection)
+- [Query Operators Usage](#query-operators-usage)
+- [Logical Operators](#logical-operators)
+- [Limit Records](#limit-records)
+- [Sort Records](#sort-records)
+- [Update One Document](#update-one-document)
+- [Update Documents](#update-documents)
+- [Delete Document](#delete-document)
+- [Beautify JSON Output](#beautify-json-output)
+
+
+## What is MongoDB 
+
 **MongoDB** is a cross-platform, document oriented database.
 
-* Provides high performance 
+- Provides high performance 
 - High availability 
 - Easy scalability 
 - It is no SQL  
 - written in C++
 
-## MongoDB can manage:
+## What MongoDB can Manage
 - Structured data 
 - Semi structured data 
 - Un structured data 
 
-## NoSQL Databases:  
+## NoSQL Databases  
 NoSQL Database is used to refer a non-SQL or non-relational database.
 
 - No table 
 - No row 
 - No complex join 
 
-## NoSQL Behind History:
+## NoSQL Behind History
 
 - In the early 1970, Flat File Systems are used, that time there was no standard, no format difficult to manage and share. 
 - In 1970 Computer scientist Edgar F. Codd proposed a database model to resolve this problem, known as relational database model 
@@ -110,7 +151,7 @@ Example: ObjectId("6009c0eee65f6dce28fb3e50")
 - Install MongoDB Compass
 - Connect MongoDB With Compass Application
 
-## MongoDB - Data Modeling:
+## MongoDB Data Modeling
 MongoDB provides `two` types of data models
 - Embedded Data Model
 - Normalized Data Model
@@ -142,7 +183,7 @@ In this model, you can have (embed) all the related data in a single document, i
 ## Normalized Data Model
 In this model, you can refer the sub documents in the original document. 
 ![Normalized Data Model](https://www.mongodb.com/docs/manual/images/data-model-normalized.bakedsvg.svg)
-## Data Types
+## Data Type
 |    <br>Data   Types      	|    <br>Description                                                                                                                                                                                                 	|
 |--------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
 |    <br>String            	|    <br>String   is the most commonly used datatype. It is used to store data. A string must   be UTF 8 valid in mongodb.                                                                                           	|
@@ -157,7 +198,7 @@ In this model, you can refer the sub documents in the original document.
 |    <br>Date              	|    <br>This   datatype stores the current date or time in unix   time format. It makes you possible to specify your own date time by creating   object of date and pass the value of date, month, year into it.    	|
 
 
-# MongoDB Shell:
+## MongoDB Shell
 1. The mongo shell is similar to the mysql in MySQL, psql in PostgreSQL, and SQL*Plus in Oracle Database.
 2. The mongo shell is an interactive JavaScript interface to MongoDB.
 3. The mongo shell is included in the MongoDB installation by default.
@@ -228,7 +269,7 @@ If requires to delete an existing collection use drop() method
 	db.studetns.find()
 ```
 projection means selecting only the necessary data rather than selecting whole of the data of a document.
-- ## MongoDB Projection 
+- ## MongoDB Projection
 ```javascript
 	db.students.find({},{_id:0,name:1})
 ```
@@ -246,6 +287,7 @@ projection means selecting only the necessary data rather than selecting whole o
 6. <font style="color:green">$ne</font> : Not Equal To Operator
 7. <font style="color:green">$in</font> : In Operator
 8. <font style="color:green">$nin</font> : Not In Operator
+
 - ## Query Operators Usage
 ```javascript
 db.Products.find({price:{$eq:"1000"}})  
@@ -272,7 +314,8 @@ To Select Specific number of records use limit method
 ```javascript
 	db.students.find().limit(5)
 ```
-- ## Sort Records (Ascending: 1, Descending: -1)
+- ## Sort Records
+`(Ascending: 1, Descending: -1)`
 ```javascript
 	db.students.find().sort({name:1,city:-1})
 	db.products.find({},{name:1}).sort({name:-1})
@@ -291,7 +334,8 @@ To Select Specific number of records use limit method
 ```javascript
 	db.students.remove({name:"Jahid",city:"Dhaka"})
 ```
-- ## Beautify JSON Output in shell query:  pretty()
+- ## Beautify JSON Output
+`pretty()`
 ```javascript
 	db.students.find().pretty()
 ```
